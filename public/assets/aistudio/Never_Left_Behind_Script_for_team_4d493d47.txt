@@ -1,0 +1,128 @@
+Absolutely. The emotional opening should remain the hook, but it needs to hand the audience over to the system sooner. This version compresses Act I to approximately 45 seconds and uses the additional time to clearly demonstrate how the NLP engine turns a person’s circumstances into a coordinated evacuation plan.
+
+Never Left Behind
+Revised 3-Minute Pitch Script
+Act I: When the World Went Silent
+Presenter 1 | 0:00–0:45
+
+[The stage is dark. Hold three seconds of silence.]
+
+Before the water came, there was darkness.
+
+At 2:00 in the morning, Hurricane Maria tore through Utuado, Puerto Rico. Mateo, who was deaf, sat beside his grandmother, whose oxygen machine depended on electricity.
+
+He could not hear the wind tearing through the mountains.
+
+But he felt the concrete trembling beneath him.
+
+Then he watched the green light on her oxygen machine flicker...
+
+once...
+
+twice...
+
+and disappear.
+
+His phone had no signal. Without light, he could not read lips or see anyone sign.
+
+Then water touched his feet.
+
+And one thought consumed him:
+
+Does anyone know we are here?
+
+The storm did not make Mateo invisible.
+
+The system had failed to see him long before the rain began.
+
+Act II: A System That Understands the Person
+Presenter 2 | 0:45–1:35
+
+[The Never Left Behind interface appears.]
+
+That is why we created Never Left Behind, an NLP-powered accessibility and evacuation-readiness system designed to understand the person behind the emergency.
+
+Instead of forcing someone in crisis to navigate different agencies, databases, and inaccessible forms, the system allows them to describe their situation in plain language:
+
+“I am deaf and use a wheelchair. My grandmother needs oxygen. There are three people in our party, and we do not have a vehicle.”
+
+From that sentence, the engine identifies the information responders need:
+
+The user’s location and contact information
+Disabilities and communication needs
+Mobility and travel limitations
+Medical or equipment dependencies
+The number of people in the party
+Transportation and shelter requirements
+
+The user does not need to understand emergency terminology.
+
+They only need to explain what is happening.
+
+The system does the work of understanding what survival requires.
+
+Act III: Turning Information Into a Way Out
+Presenter 2 | 1:35–2:25
+
+Once the user’s needs are understood, Never Left Behind locates them and cross-references their situation against three connected knowledge areas.
+
+First, it searches nearby healthcare facilities for resources capable of supporting medical needs, including oxygen dependency and continuous electrical power.
+
+Second, it evaluates available emergency shelters, looking beyond distance to determine whether a location can accommodate wheelchairs, medical equipment, the full party, and specific accessibility needs.
+
+Third, it reviews public transportation and paratransit options to determine how the family can physically reach safety.
+
+The system then combines those findings with route and hazard information.
+
+Because the closest shelter is not always the safest shelter.
+
+A building may be nearby but have stairs.
+
+A facility may be open but lack backup power.
+
+A bus route may exist but be inaccessible to a wheelchair.
+
+And a road that appears passable may lead directly through rising water.
+
+Never Left Behind evaluates the entire journey, not just the destination.
+
+Act IV: From Data to Coordinated Action
+Presenter 2 | 2:25–2:45
+
+In seconds, scattered information becomes one personalized evacuation plan:
+
+A verified destination.
+
+An accessible route.
+
+The transportation required.
+
+The medical and accessibility accommodations needed upon arrival.
+
+And the contact information authorized responders need to reach the family.
+
+When information is missing, the system does not guess.
+
+It identifies the gap, flags the risk, and prioritizes options that can be verified.
+
+Act V: No More Names Lost in the Dark
+Presenter 1 | 2:45–3:00
+
+Survival should not belong only to those who can hear the siren, run down the stairs, drive themselves to safety, or breathe without electricity.
+
+Never Left Behind turns one sentence into recognition, recognition into action, and action into a way out.
+
+Because no one should spend their final moments wondering whether the world knows they exist.
+
+And when the lights go out...
+
+no one should be left behind.
+
+[Hold two seconds of silence.]
+
+Why This Balance Works
+Act I retains the emotional intensity, but reaches the problem statement within 45 seconds.
+The system is explained as a clear sequence: understand the person → locate resources → evaluate accessibility → create a coordinated plan.
+The script demonstrates that NLP is not merely collecting words. It is translating human circumstances into specific operational requirements.
+Concrete examples, such as stairs, backup power, wheelchair transportation, and flooded routes, make the system’s intelligence easier to understand.
+The ending returns to Mateo’s central fear: not whether information exists, but whether the system recognizes that he exists.

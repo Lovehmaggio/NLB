@@ -1,0 +1,6 @@
+{
+  "name": "Emergency Shelter Finder - Visual Presentation Deck & Interactive Showcase",
+  "description": "A visual storytelling and presentation platform for the Emergency Shelter Finder, powered by ADK Toolbox, BigQuery GIS, and Google Maps Platform with live team presenter video.",
+  "requestFramePermissions": ["camera", "microphone"],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

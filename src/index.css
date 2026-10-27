@@ -1,0 +1,435 @@
+@import "tailwindcss";
+
+@layer base {
+  body {
+    font-family: 'Plus Jakarta Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    color: #0f172a;
+    background-color: #090d16;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  code, kbd, samp, pre {
+    font-family: 'JetBrains Mono', monospace;
+  }
+}
+
+/* Custom presentation slide animations and utilities */
+.slide-ratio-16-9 {
+  aspect-ratio: 16 / 9;
+}
+
+@keyframes pulseGlow {
+  0%, 100% {
+    box-shadow: 0 0 15px rgba(59, 130, 246, 0.4);
+  }
+  50% {
+    box-shadow: 0 0 30px rgba(59, 130, 246, 0.75);
+  }
+}
+
+.glow-blue {
+  animation: pulseGlow 3s infinite ease-in-out;
+}
+
+/* CSS-based cinematic view transition animations */
+@keyframes cinematicViewEnter {
+  0% {
+    opacity: 0;
+    transform: translateY(10px) scale(0.996);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes cinematicSlideFromRight {
+  0% {
+    opacity: 0;
+    transform: translateX(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes cinematicSlideFromLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes cinematicCrossfade {
+  0% {
+    opacity: 0;
+    transform: scale(0.99);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.cinematic-view-enter {
+  animation: cinematicViewEnter 280ms cubic-bezier(0.16, 1, 0.3, 1) both;
+  will-change: transform, opacity;
+}
+
+.slide-transition-right {
+  animation: cinematicSlideFromRight 260ms cubic-bezier(0.16, 1, 0.3, 1) both;
+  will-change: transform, opacity;
+}
+
+.slide-transition-left {
+  animation: cinematicSlideFromLeft 260ms cubic-bezier(0.16, 1, 0.3, 1) both;
+  will-change: transform, opacity;
+}
+
+.slide-transition-fade {
+  animation: cinematicCrossfade 260ms cubic-bezier(0.16, 1, 0.3, 1) both;
+  will-change: transform, opacity;
+}
+
+/* Accessibility: Respect prefers-reduced-motion */
+@media (prefers-reduced-motion: reduce) {
+  .cinematic-view-enter,
+  .slide-transition-right,
+  .slide-transition-left,
+  .slide-transition-fade {
+    animation: none !important;
+    transition: none !important;
+  }
+}
+
+/* Custom scrollbars for presentation panels */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(15, 23, 42, 0.6);
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(100, 116, 139, 0.4);
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(148, 163, 184, 0.6);
+}
+
+/* ==========================================================================
+   THEME: WARM BEIGE (Soft Sand & Editorial Linen)
+   ========================================================================== */
+[data-theme='beige'] {
+  color-scheme: light;
+  background-color: #f5f0e6 !important;
+  color: #26221d !important;
+}
+
+[data-theme='beige'] body {
+  background-color: #f5f0e6 !important;
+  color: #26221d !important;
+}
+
+/* Background surfaces */
+[data-theme='beige'] .bg-slate-950 {
+  background-color: #f5f0e6 !important;
+}
+
+[data-theme='beige'] .bg-slate-900 {
+  background-color: #ece4d6 !important;
+}
+
+[data-theme='beige'] .bg-slate-900\/90,
+[data-theme='beige'] .bg-slate-900\/80,
+[data-theme='beige'] .bg-slate-900\/70,
+[data-theme='beige'] .bg-slate-900\/60 {
+  background-color: rgba(236, 228, 214, 0.94) !important;
+}
+
+[data-theme='beige'] .bg-slate-950\/90,
+[data-theme='beige'] .bg-slate-950\/80,
+[data-theme='beige'] .bg-slate-950\/70 {
+  background-color: rgba(245, 240, 230, 0.94) !important;
+}
+
+[data-theme='beige'] .bg-slate-800 {
+  background-color: #dfd6c4 !important;
+}
+
+[data-theme='beige'] .bg-slate-800\/80,
+[data-theme='beige'] .bg-slate-800\/60,
+[data-theme='beige'] .bg-slate-800\/50,
+[data-theme='beige'] .bg-slate-800\/30 {
+  background-color: rgba(223, 214, 196, 0.75) !important;
+}
+
+/* Hovers */
+[data-theme='beige'] .hover\:bg-slate-800:hover {
+  background-color: #d6ccb7 !important;
+}
+
+[data-theme='beige'] .hover\:bg-slate-900:hover {
+  background-color: #e2d9c7 !important;
+}
+
+[data-theme='beige'] .hover\:bg-slate-700:hover {
+  background-color: #cdc1ab !important;
+}
+
+/* Borders */
+[data-theme='beige'] .border-slate-800,
+[data-theme='beige'] .border-slate-800\/80,
+[data-theme='beige'] .border-slate-800\/90,
+[data-theme='beige'] .border-slate-700,
+[data-theme='beige'] .border-slate-700\/80,
+[data-theme='beige'] .border-slate-700\/50 {
+  border-color: #dbd0bd !important;
+}
+
+/* Typography */
+[data-theme='beige'] .text-white {
+  color: #1a1714 !important;
+}
+
+[data-theme='beige'] .text-slate-100,
+[data-theme='beige'] .text-slate-200 {
+  color: #29241e !important;
+}
+
+[data-theme='beige'] .text-slate-300 {
+  color: #423b32 !important;
+}
+
+[data-theme='beige'] .text-slate-400 {
+  color: #5c5346 !important;
+}
+
+[data-theme='beige'] .text-slate-500 {
+  color: #7a7060 !important;
+}
+
+[data-theme='beige'] .text-slate-600 {
+  color: #948976 !important;
+}
+
+/* Slide Gradients & Canvas */
+[data-theme='beige'] .bg-gradient-to-br.from-slate-950 {
+  background-image: linear-gradient(to bottom right, #f8f5ee, #ebe3d4, #f4efe4) !important;
+}
+
+[data-theme='beige'] .slide-ratio-16-9 {
+  background-color: #fcfbfa !important;
+  border-color: #dbd0bd !important;
+  box-shadow: 0 20px 40px -15px rgba(50, 40, 30, 0.12) !important;
+}
+
+/* Header & Navigation */
+[data-theme='beige'] header {
+  background-color: rgba(245, 240, 230, 0.95) !important;
+  border-bottom-color: #dbd0bd !important;
+}
+
+/* Map Canvas Container */
+[data-theme='beige'] .bg-\[\#070b14\],
+[data-theme='beige'] .bg-\[\#090e1a\],
+[data-theme='beige'] .bg-\[\#0b1329\] {
+  background-color: #ede5d6 !important;
+}
+
+/* Form Controls & Inputs */
+[data-theme='beige'] input,
+[data-theme='beige'] select,
+[data-theme='beige'] textarea {
+  background-color: #fbf9f4 !important;
+  color: #1a1714 !important;
+  border-color: #dbd0bd !important;
+}
+
+[data-theme='beige'] input::placeholder,
+[data-theme='beige'] textarea::placeholder {
+  color: #8c806d !important;
+}
+
+[data-theme='beige'] select option {
+  background-color: #fbf9f4;
+  color: #1a1714;
+}
+
+/* Scrollbars in beige mode */
+[data-theme='beige'] ::-webkit-scrollbar-track {
+  background: #ede6d8;
+}
+
+[data-theme='beige'] ::-webkit-scrollbar-thumb {
+  background: #c8bdab;
+}
+
+[data-theme='beige'] ::-webkit-scrollbar-thumb:hover {
+  background: #b0a490;
+}
+
+
+/* ==========================================================================
+   THEME: COOL SLATE GRAY (Architectural Studio Slate)
+   ========================================================================== */
+[data-theme='gray'] {
+  color-scheme: light;
+  background-color: #eef2f6 !important;
+  color: #0f172a !important;
+}
+
+[data-theme='gray'] body {
+  background-color: #eef2f6 !important;
+  color: #0f172a !important;
+}
+
+/* Background surfaces */
+[data-theme='gray'] .bg-slate-950 {
+  background-color: #eef2f6 !important;
+}
+
+[data-theme='gray'] .bg-slate-900 {
+  background-color: #e2e8f0 !important;
+}
+
+[data-theme='gray'] .bg-slate-900\/90,
+[data-theme='gray'] .bg-slate-900\/80,
+[data-theme='gray'] .bg-slate-900\/70,
+[data-theme='gray'] .bg-slate-900\/60 {
+  background-color: rgba(226, 232, 240, 0.95) !important;
+}
+
+[data-theme='gray'] .bg-slate-950\/90,
+[data-theme='gray'] .bg-slate-950\/80,
+[data-theme='gray'] .bg-slate-950\/70 {
+  background-color: rgba(238, 242, 246, 0.95) !important;
+}
+
+[data-theme='gray'] .bg-slate-800 {
+  background-color: #cbd5e1 !important;
+}
+
+[data-theme='gray'] .bg-slate-800\/80,
+[data-theme='gray'] .bg-slate-800\/60,
+[data-theme='gray'] .bg-slate-800\/50,
+[data-theme='gray'] .bg-slate-800\/30 {
+  background-color: rgba(203, 213, 225, 0.75) !important;
+}
+
+/* Hovers */
+[data-theme='gray'] .hover\:bg-slate-800:hover {
+  background-color: #b9c7d8 !important;
+}
+
+[data-theme='gray'] .hover\:bg-slate-900:hover {
+  background-color: #d8e1ea !important;
+}
+
+[data-theme='gray'] .hover\:bg-slate-700:hover {
+  background-color: #aebfd1 !important;
+}
+
+/* Borders */
+[data-theme='gray'] .border-slate-800,
+[data-theme='gray'] .border-slate-800\/80,
+[data-theme='gray'] .border-slate-800\/90,
+[data-theme='gray'] .border-slate-700,
+[data-theme='gray'] .border-slate-700\/80,
+[data-theme='gray'] .border-slate-700\/50 {
+  border-color: #cbd5e1 !important;
+}
+
+/* Typography */
+[data-theme='gray'] .text-white {
+  color: #0f172a !important;
+}
+
+[data-theme='gray'] .text-slate-100,
+[data-theme='gray'] .text-slate-200 {
+  color: #1e293b !important;
+}
+
+[data-theme='gray'] .text-slate-300 {
+  color: #334155 !important;
+}
+
+[data-theme='gray'] .text-slate-400 {
+  color: #475569 !important;
+}
+
+[data-theme='gray'] .text-slate-500 {
+  color: #64748b !important;
+}
+
+[data-theme='gray'] .text-slate-600 {
+  color: #94a3b8 !important;
+}
+
+/* Slide Gradients & Canvas */
+[data-theme='gray'] .bg-gradient-to-br.from-slate-950 {
+  background-image: linear-gradient(to bottom right, #f8fafc, #e2e8f0, #f1f5f9) !important;
+}
+
+[data-theme='gray'] .slide-ratio-16-9 {
+  background-color: #ffffff !important;
+  border-color: #cbd5e1 !important;
+  box-shadow: 0 20px 40px -15px rgba(15, 23, 42, 0.1) !important;
+}
+
+/* Header & Navigation */
+[data-theme='gray'] header {
+  background-color: rgba(238, 242, 246, 0.95) !important;
+  border-bottom-color: #cbd5e1 !important;
+}
+
+/* Map Canvas Container */
+[data-theme='gray'] .bg-\[\#070b14\],
+[data-theme='gray'] .bg-\[\#090e1a\],
+[data-theme='gray'] .bg-\[\#0b1329\] {
+  background-color: #e2e8f0 !important;
+}
+
+/* Form Controls & Inputs */
+[data-theme='gray'] input,
+[data-theme='gray'] select,
+[data-theme='gray'] textarea {
+  background-color: #ffffff !important;
+  color: #0f172a !important;
+  border-color: #cbd5e1 !important;
+}
+
+[data-theme='gray'] input::placeholder,
+[data-theme='gray'] textarea::placeholder {
+  color: #94a3b8 !important;
+}
+
+[data-theme='gray'] select option {
+  background-color: #ffffff;
+  color: #0f172a;
+}
+
+/* Scrollbars in gray mode */
+[data-theme='gray'] ::-webkit-scrollbar-track {
+  background: #e2e8f0;
+}
+
+[data-theme='gray'] ::-webkit-scrollbar-thumb {
+  background: #94a3b8;
+}
+
+[data-theme='gray'] ::-webkit-scrollbar-thumb:hover {
+  background: #64748b;
+}
+
+
